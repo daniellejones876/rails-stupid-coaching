@@ -1,10 +1,17 @@
-<h1>okay we back</h1>
-  <%= @answer %>
-<p>
-  <em>You</em>
-</p>
-<%= @response %>
-<p>
-  <em>Coach</em>
-</p>
-<%= link_to "Ask again", ask_path %>
+
+<div class="container bg-light col-md-6">
+  <div class="border-bottom bg-white">
+    <h1>Seriously...?</h1>
+  </div>
+  <div>
+    <%= @answer %>
+    <p><em>-You</em></p>
+  </div>
+
+  <div class="alert alert-warning">
+  <%= @response %>
+    <p><em>-Coach</em></p>
+  </div>
+
+  <%= link_to "Ask again", ask_path %>
+</div>

@@ -6,7 +6,7 @@ class QuestionsController < ApplicationController
   def ask; end
 
   def answer
-    @answer = params[:question]
+    @answer = params[:question] unless params[:question] == ' '
     @response = if @answer.downcase == 'i am going to work'
                   'Great!'
                 elsif @answer.include?('?')
